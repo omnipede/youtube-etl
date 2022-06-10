@@ -6,11 +6,11 @@ with open('requirements.txt', 'r') as f:
 setup(
     name="youtube-etl",
     version="0.1.0",
-    description="Youtube 기반 ML 데이터셋 다운로드용 pipeline 코드",
-    url="https://github.com/omnipede/youtube-caption-subclip-pipeline",
+    description="Youtube 기반 ML 데이터셋 다운로드용 youtubetl 코드",
+    url="https://github.com/omnipede/youtube-etl",
     author="omnipede",
     author_email="omnipede@naver.com",
-    packages=['ytl'],
+    packages=['youtubetl'],
     zip_safe=False,
     install_requires=required
 )

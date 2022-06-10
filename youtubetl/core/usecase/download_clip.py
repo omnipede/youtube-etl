@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 
-from pipeline.core.domain.YoutubeClip import YoutubeClip
+from youtubetl.core.domain.YoutubeClip import YoutubeClip
 from tqdm import tqdm
 
 

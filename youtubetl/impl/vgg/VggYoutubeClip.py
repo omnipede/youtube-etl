@@ -1,6 +1,6 @@
 import os
-from pipeline.core.domain.YoutubeClip import YoutubeClip
-from pipeline.impl.utils import ydl_download, convert_to_wav_and_subclip, download_and_subclip
+from youtubetl.core.domain.YoutubeClip import YoutubeClip
+from youtubetl.impl.utils import ydl_download, convert_to_wav_and_subclip, download_and_subclip
 
 
 class VggYoutubeClip(YoutubeClip):

@@ -1,4 +1,4 @@
-from pipeline.impl.vgg.VggYoutubeClipDownloader import VggYoutubeClipDownloader
+from youtubetl.impl.vgg.VggYoutubeClipDownloader import VggYoutubeClipDownloader
 
 
 if __name__ == '__main__':

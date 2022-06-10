@@ -1,6 +1,6 @@
-from pipeline.core.domain.YoutubeClip import YoutubeClip
-from pipeline.core.usecase.download_clip import YoutubeClipDownloader
-from pipeline.impl.vgg.VggYoutubeClip import VggYoutubeClip
+from youtubetl.core.domain.YoutubeClip import YoutubeClip
+from youtubetl.core.usecase.download_clip import YoutubeClipDownloader
+from youtubetl.impl.vgg.VggYoutubeClip import VggYoutubeClip
 
 
 class VggYoutubeClipDownloader(YoutubeClipDownloader):
