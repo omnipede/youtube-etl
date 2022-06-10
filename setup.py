@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('requirements.txt', 'r') as f:
     required = f.read().splitlines()
@@ -10,7 +10,7 @@ setup(
     url="https://github.com/omnipede/youtube-etl",
     author="omnipede",
     author_email="omnipede@naver.com",
-    packages=['youtubetl'],
+    packages=find_packages(),
     zip_safe=False,
     install_requires=required
 )
