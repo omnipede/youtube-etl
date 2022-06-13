@@ -11,11 +11,15 @@ class YoutubeClipDownloader:
         self.pool_size = pool_size
         self.clips = None
 
-    def execute(self):
+    def execute(self, num_split: int = 1, target: int = 0):
+
+        if target > num_split - 1:
+            raise Exception(f"Invalid argument: target {target} is larger than num_split {num_split}")
 
         # Fetch all clips to be downloaded
-        clips: [YoutubeClip] = self.clips if self.clips is not None \
-            else self._fetch_clips_to_download()
+        clips: [YoutubeClip] = self._fetch_clips_to_download()
+        split_clips = np.array_split(clips, num_split)
+        clips = split_clips[target]
 
         pbar = tqdm(total=len(clips))
 
@@ -42,14 +46,6 @@ class YoutubeClipDownloader:
             clip.download()
         except:
             pass
-
-    def split(self, num_split: int = 2, target: int = 0):
-        if target > num_split - 1:
-            raise Exception(f"Invalid argument: target {target} is larger than num_split {num_split}")
-
-        clips: [YoutubeClip] = self._fetch_clips_to_download()
-        split_clips = np.array_split(clips, num_split)
-        self.clips = split_clips[target]
 
     def _fetch_clips_to_download(self) -> [YoutubeClip]:
         raise Exception("Not implemented yet.")
