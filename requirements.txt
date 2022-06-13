@@ -1,3 +1,4 @@
 certifi==2022.5.18.1
+numpy==1.22.4
 tqdm==4.64.0
 youtube-dl==2021.12.17
