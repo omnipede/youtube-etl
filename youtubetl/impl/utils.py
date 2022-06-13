@@ -13,7 +13,7 @@ def download_and_subclip(url: str, output_path: str, start: int, end: int) -> No
     """
 
     subprocess.call(
-        f'ffmpeg -y -ss {start} -to {end} -i "{url}" -c:v libx264 -preset veryfast -crf 22 "{output_path}" ',
+        f'ffmpeg -y -ss {start} -to {end} -i "{url}" -preset veryfast "{output_path}" ',
         shell=True,
 
         # Disable console logging
