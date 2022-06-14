@@ -1,7 +1,7 @@
 import os
 
 from youtubetl.core.domain.YoutubeClip import YoutubeClip
-from youtubetl.impl.utils import ydl_download, download_and_subclip, convert_to_wav_and_subclip
+from youtubetl.impl.utils import ydl_download, convert_to_wav_and_subclip
 
 
 class AudioCapsYoutubeClips(YoutubeClip):
@@ -25,6 +25,6 @@ class AudioCapsYoutubeClips(YoutubeClip):
         self._download_and_subclip(video_url)
 
     def _download_and_subclip(self, url: str):
-        file_name = f"{self.youtube_id}_{self.start}_{self.end}.mp4"
+        file_name = f"{self.youtube_id}_{self.start}_{self.end}.wav"
         output_path = os.path.join(self.output_dir, file_name)
         convert_to_wav_and_subclip(url, output_path, self.start, self.end)
